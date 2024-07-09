@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 
@@ -15,7 +15,7 @@ import Contact from './pages/Contact';
 import EBrochure from './pages/EBrochure';
 import Layout from './components/Layout'; // Import the Layout component
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     element: <Layout />, // Use Layout as the parent element
     children: [
