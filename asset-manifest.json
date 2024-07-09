@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/pravayu-laboratory/static/css/main.6610e002.css",
+    "main.js": "/pravayu-laboratory/static/js/main.b27fb637.js",
+    "static/media/slide3.jpg": "/pravayu-laboratory/static/media/slide3.f3a1c5f7e2d762e6032c.jpg",
+    "static/media/logo.png": "/pravayu-laboratory/static/media/logo.5ee7b6d833c8613430a2.png",
+    "static/media/slide1.jpg": "/pravayu-laboratory/static/media/slide1.21fa55936b59cd1132ac.jpg",
+    "static/media/slide2.jpg": "/pravayu-laboratory/static/media/slide2.59aabf72036bcca9488b.jpg",
+    "index.html": "/pravayu-laboratory/index.html",
+    "main.6610e002.css.map": "/pravayu-laboratory/static/css/main.6610e002.css.map",
+    "main.b27fb637.js.map": "/pravayu-laboratory/static/js/main.b27fb637.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6610e002.css",
+    "static/js/main.b27fb637.js"
+  ]
+}
