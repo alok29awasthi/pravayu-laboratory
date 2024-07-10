@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/pravayu-laboratory/static/css/main.6610e002.css",
-    "main.js": "/pravayu-laboratory/static/js/main.91109ed9.js",
+    "main.css": "/pravayu-laboratory/static/css/main.8824fd32.css",
+    "main.js": "/pravayu-laboratory/static/js/main.c9661c2a.js",
+    "static/media/vision.jpg": "/pravayu-laboratory/static/media/vision.35072a81a4f54fbb9779.jpg",
     "static/media/slide3.jpg": "/pravayu-laboratory/static/media/slide3.f3a1c5f7e2d762e6032c.jpg",
+    "static/media/objective.jpg": "/pravayu-laboratory/static/media/objective.09a5ba26d16581302852.jpg",
+    "static/media/about.jpg": "/pravayu-laboratory/static/media/about.70eb84f4169470742933.jpg",
     "static/media/logo.png": "/pravayu-laboratory/static/media/logo.5ee7b6d833c8613430a2.png",
     "static/media/slide1.jpg": "/pravayu-laboratory/static/media/slide1.21fa55936b59cd1132ac.jpg",
     "static/media/slide2.jpg": "/pravayu-laboratory/static/media/slide2.59aabf72036bcca9488b.jpg",
     "index.html": "/pravayu-laboratory/index.html",
-    "main.6610e002.css.map": "/pravayu-laboratory/static/css/main.6610e002.css.map",
-    "main.91109ed9.js.map": "/pravayu-laboratory/static/js/main.91109ed9.js.map"
+    "main.8824fd32.css.map": "/pravayu-laboratory/static/css/main.8824fd32.css.map",
+    "main.c9661c2a.js.map": "/pravayu-laboratory/static/js/main.c9661c2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.6610e002.css",
-    "static/js/main.91109ed9.js"
+    "static/css/main.8824fd32.css",
+    "static/js/main.c9661c2a.js"
   ]
 }
