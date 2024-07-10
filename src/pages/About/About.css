@@ -1,0 +1,67 @@
+.about-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 10%;
+}
+
+.about-section {
+  color: #f0f0f0;
+  background-color: #474343; /* Light grey background */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 40px 80px 5px 80px;
+  margin: 0 1rem 4rem 1rem;
+  position: relative;
+  text-align: left;
+  min-height: 300px;
+  border-radius: 10px;
+}
+
+.about-company-section {
+  background-image: url('../../assets/images/about.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+}
+
+.vision-section {
+  background-image: url('../../assets/images/vision.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+}
+
+.objective-section {
+  background-image: url('../../assets/images/objective.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px; /* Width of the vertical line */
+  background-color: rgb(217, 169, 169);
+  border-radius: 20px 0 0 20px;
+}
+
+.about-section h2, .about-description h2 {
+  text-align: left;
+  color: #ff9245;
+  font-size: 35px;
+}
+
+.about-description-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about-description-content p {
+  line-height: 35px;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}

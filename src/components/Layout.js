@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
-import Footer from './Footer';
-import NavbarComponent from './Navbar';
+import Footer from './Footer/Footer';
+import NavbarComponent from './Navbar/Navbar';
 import '../App.css'; // Import the CSS file
 
 const Layout = () => {

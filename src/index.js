@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
@@ -8,9 +8,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Services from './pages/Services/Services';
 import Contact from './pages/Contact';
 import EBrochure from './pages/EBrochure';
 import Layout from './components/Layout'; // Import the Layout component

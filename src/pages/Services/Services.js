@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Services.css'; // Import your custom CSS file
-import Modal from '../components/Modal/Modal';
+import Modal from '../../components/Modal/Modal';
 
 const Services = () => {
   const [modalOpen, setModalOpen] = useState(false);
