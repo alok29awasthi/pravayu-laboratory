@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/pravayu-laboratory/static/css/main.8824fd32.css",
-    "main.js": "/pravayu-laboratory/static/js/main.c9661c2a.js",
-    "static/media/vision.jpg": "/pravayu-laboratory/static/media/vision.35072a81a4f54fbb9779.jpg",
+    "main.css": "/pravayu-laboratory/static/css/main.80e527c2.css",
+    "main.js": "/pravayu-laboratory/static/js/main.9bb13b34.js",
+    "static/media/vision.jpg": "/pravayu-laboratory/static/media/vision.3d39aec2bbba523606d1.jpg",
+    "static/media/objective.jpg": "/pravayu-laboratory/static/media/objective.ed17a8b7326a9c81c36d.jpg",
     "static/media/slide3.jpg": "/pravayu-laboratory/static/media/slide3.f3a1c5f7e2d762e6032c.jpg",
-    "static/media/objective.jpg": "/pravayu-laboratory/static/media/objective.09a5ba26d16581302852.jpg",
-    "static/media/about.jpg": "/pravayu-laboratory/static/media/about.70eb84f4169470742933.jpg",
+    "static/media/about.jpg": "/pravayu-laboratory/static/media/about.caa48e3262d30ebb7db3.jpg",
+    "static/media/nabl_logo.png": "/pravayu-laboratory/static/media/nabl_logo.c3dddfd69210c94f46a5.png",
+    "static/media/iso_logo.png": "/pravayu-laboratory/static/media/iso_logo.bc9e7a3af14871ccc999.png",
     "static/media/logo.png": "/pravayu-laboratory/static/media/logo.5ee7b6d833c8613430a2.png",
     "static/media/slide1.jpg": "/pravayu-laboratory/static/media/slide1.21fa55936b59cd1132ac.jpg",
     "static/media/slide2.jpg": "/pravayu-laboratory/static/media/slide2.59aabf72036bcca9488b.jpg",
     "index.html": "/pravayu-laboratory/index.html",
-    "main.8824fd32.css.map": "/pravayu-laboratory/static/css/main.8824fd32.css.map",
-    "main.c9661c2a.js.map": "/pravayu-laboratory/static/js/main.c9661c2a.js.map"
+    "main.80e527c2.css.map": "/pravayu-laboratory/static/css/main.80e527c2.css.map",
+    "main.9bb13b34.js.map": "/pravayu-laboratory/static/js/main.9bb13b34.js.map"
   },
   "entrypoints": [
-    "static/css/main.8824fd32.css",
-    "static/js/main.c9661c2a.js"
+    "static/css/main.80e527c2.css",
+    "static/js/main.9bb13b34.js"
   ]
 }
