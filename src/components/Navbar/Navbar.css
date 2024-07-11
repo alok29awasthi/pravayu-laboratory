@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    background-color: rgb(32, 29, 29);
+    background-color: color(srgb-linear 0.17 0.25 0.54 / 1);
     box-shadow: rgba(105, 8, 8, 0.15) 0px 5px 15px 0px;
     padding: 0 2rem; /* Padding applied evenly on left and right */
   }
@@ -43,11 +43,11 @@
   
   .cv__navbar-links li {
     color: white;
-    font-size: 14px; /* Adjust font size as needed */
-    margin-right: 1rem; /* Adjust spacing between links */
+    font-size: 16px; /* Adjust font size as needed */
+    margin-right: 2rem; /* Adjust spacing between links */
     cursor: pointer;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
+    font-weight: bold;
     letter-spacing: 0.02cm;
   }
   
@@ -58,7 +58,7 @@
   }
   
   .cv__navbar-links li a:hover {
-    color: lightgrey; /* Change color on hover */
+    color: rgb(0, 0, 0); /* Change color on hover */
   }
   
   .cv__navbar-smallscreen {

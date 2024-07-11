@@ -7,6 +7,7 @@ import './Home.css';
 import slide1 from '../../assets/images/slide1.jpg';
 import slide2 from '../../assets/images/slide2.jpg';
 import slide3 from '../../assets/images/slide3.jpg';
+import Hero from '../../components/Hero/Hero';
 
 function Home() {
   // State to track if slideshow should be paused
@@ -27,6 +28,8 @@ function Home() {
 
   return (
     <div className="Home">
+      <Hero/>
+
       <h2>Welcome to Pravayu Laboratory</h2>
       <p>Providing top-notch laboratory services since 2024.</p>
 

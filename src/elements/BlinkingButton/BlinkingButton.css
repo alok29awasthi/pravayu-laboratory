@@ -1,0 +1,28 @@
+.blinking-button {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 28px;
+    outline: transparent;
+    background-color: #1A8EFD;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .8px;
+    cursor: pointer;
+    transition: all .4s ease;
+    animation: blink 1.5s infinite;
+  }
+  
+  @keyframes blink {
+    0% { background-color: #fd1a1a; }
+    50% { background-color: #1A8EFD; }
+    100% { background-color: #fd1a1a; }
+  }
+  
+  .blinking-button:hover {
+    animation: none;
+    background-color: #1A8EFD; /* Optional: Set a specific color when hovered */
+  }
+  

@@ -12,11 +12,11 @@ const AboutNavbar = ({ onToggle }, ref) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll('.about-section');
+      const sections = document.querySelectorAll('.about-description-container');
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop - sectionHeight / 2) {
+        if (window.scrollY >= sectionTop - sectionHeight/2) {
           setActiveLink(section.getAttribute('id'));
         }
       });
@@ -39,17 +39,17 @@ const AboutNavbar = ({ onToggle }, ref) => {
 
       <ul>
         <li>
-          <ScrollLink to="about-company" smooth={true} duration={500} className={activeLink === 'about-company' ? 'active' : ''}>
+          <ScrollLink to="about-company" smooth={true} duration={500} offset={-50} className={activeLink === 'about-company' ? 'active' : ''}>
             <PiBuildingOfficeFill className="icon" /> {!isShowingIcons && <span>About the Company</span>}
           </ScrollLink>
         </li>
         <li>
-          <ScrollLink to="vision" smooth={true} duration={500} className={activeLink === 'vision' ? 'active' : ''}>
+          <ScrollLink to="vision" smooth={true} duration={500} offset={-50} className={activeLink === 'vision' ? 'active' : ''}>
             <FaEye className="icon" /> {!isShowingIcons && <span>Vision</span>}
           </ScrollLink>
         </li>
         <li>
-          <ScrollLink to="objective" smooth={true} duration={500} className={activeLink === 'objective' ? 'active' : ''}>
+          <ScrollLink to="objective" smooth={true} duration={500} offset={-50} className={activeLink === 'objective' ? 'active' : ''}>
             <IoIosPeople className="icon" /> {!isShowingIcons && <span>Objective</span>}
           </ScrollLink>
         </li>

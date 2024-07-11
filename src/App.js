@@ -16,7 +16,7 @@ function App() {
     <Router>
       <div className="App">
         {/* Header only renders on the Home page */}
-        <Route exact path="/" component={Header} />
+        {/* <Route exact path="/" component={Header} /> */}
         
         <Navbar />
         
