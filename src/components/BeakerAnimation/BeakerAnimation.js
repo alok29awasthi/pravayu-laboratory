@@ -7,10 +7,7 @@ const BeakerAnimation = ({ onAnimationEnd }) => {
   const [visible, setVisible] = useState(true); // Start hidden
 
   useEffect(() => {
-    // localStorage.clear();
-    sessionStorage.clear()
     const hasVisited = sessionStorage.getItem('hasVisited') === 'true';
-    console.log(hasVisited)
 
     if (!hasVisited) {
       setVisible(true);

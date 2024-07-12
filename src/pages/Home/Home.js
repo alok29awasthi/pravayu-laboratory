@@ -13,9 +13,8 @@ function Home() {
   const handleAnimationEnd = () => {
     setAnimationComplete(true);
   };
-  sessionStorage.clear();
+  
   const hasVisited = sessionStorage.getItem('hasVisited') === "true";
-  // console.log(hasVisited)
 
   return (
     <div className="Home">
