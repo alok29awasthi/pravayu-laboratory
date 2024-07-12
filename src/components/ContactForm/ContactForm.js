@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Form, Row, Col } from 'react-bootstrap';
 import './ContactForm.css'; // Import custom CSS for styling
+import SendButton from '../../elements/SendButton/SendButton';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -126,9 +127,9 @@ function ContactForm() {
           </Col>
         </Row>
 
-        <Button variant="primary" type="submit" className="submit-button">
-          Send
-        </Button>
+        <div className='send'>
+          <SendButton/>
+        </div>
       </Form>
     </div>
   );

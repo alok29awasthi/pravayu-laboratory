@@ -1,3 +1,25 @@
+/* .full-page-left {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  position: fixed;
+  width: 20%;
+  background-image: url('../../assets/images/benzene.png');
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.full-page-right {
+  top: 0;
+  right: 0;
+  height: 100vh;
+  position: fixed;
+  width: 20%;
+  background-image: url('../../assets/images/benzene.png');
+  background-size: cover;
+  background-repeat: repeat;
+} */
+
 .services-container {
   padding: 20px 100px;
 }
@@ -5,53 +27,81 @@
 .services-grid {
   margin: 2rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 50px;
 }
 
+.services-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+.services-title > span {
+  position: relative;
+}
+.services-title span::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: #9D2553;
+  border-radius: 8px;
+  left: 0;
+  bottom: -12px;
+}
+
 .service-box {
-  padding: 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 200px;
+  /* align-items:center; */
+  height: 400px;
   position: relative;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 1s ease, background-color 1s ease;
   overflow: hidden;
-}
-
-.service-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(37, 36, 36, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-image);
-  background-position: center;
-  background-size: cover;
-  /* filter: brightness(50%) contrast(100%) saturate(100%); */
-  transition: filter 0.3s ease;
-  z-index: -1;
-}
-
-.service-box:hover::before {
-  filter: brightness(150%) contrast(110%) saturate(120%);
+  border: 10px solid #d7d3d3;
 }
 
 .service-name {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  color: rgb(255, 253, 253);
+  color: rgb(37, 35, 35);
   line-height: 30px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.service-box:hover .service-name {
-  color: #ffffff;
-  transform: scale(1.1);
+.service-box .info-card-title {
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.service-box:hover .info-card-title {
+  color: #574e4e;
+  transform: scale(1.05);
+}
+
+.service-image {
+  height: 100%;
+  /* width: 500px; */
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.blue-background {
+  padding-left: 50px;
+  text-align: left;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  /* background-image: url('../../assets/images/benzene.png');
+  background-size: cover;
+  background-position: center;
+  background-size: 500px; */
+}
+
+.white-background {
+  padding-right: 50px;
+  text-align: right;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }

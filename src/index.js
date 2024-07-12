@@ -11,7 +11,7 @@ import {
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Services from './pages/Services/Services';
-import Contact from './pages/Contact';
+import Contact from './pages/Contact/Contact';
 import EBrochure from './pages/EBrochure';
 import Layout from './components/Layout'; // Import the Layout component
 

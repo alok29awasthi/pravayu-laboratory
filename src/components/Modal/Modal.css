@@ -20,8 +20,11 @@
 }
 
 .modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 80%;
   background: white;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transform: scale(0.9);
@@ -39,6 +42,9 @@
 }
 
 .modal-close {
+  position: fixed;
+  top: 0;
+  right: 10px;
   cursor: pointer;
   font-size: 24px;
 }

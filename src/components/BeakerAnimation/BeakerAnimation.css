@@ -1,0 +1,203 @@
+.beaker-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+  z-index: 1000;
+  transition: transform 2s ease-in-out; /* Add transition for sliding up effect */
+}
+
+.hidden {
+  transform: translateY(-100%); /* Slide up effect */
+}
+
+.containing {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: rotate(15deg);
+}
+
+.liquid {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 150, 255, 0.6);
+  position: absolute;
+  bottom: 0;
+  animation: fillBeaker 4s ease-in-out forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fillBeaker {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60%;
+  }
+}
+
+.flask {
+  margin-bottom: 100px;
+  display: inline-block;
+  width: 240px; /* Increased width */
+  height: 240px; /* Increased height */
+  border-radius: 50%;
+  border: 10px solid #ffbecc;
+  background: #ffbecc;
+  position: relative;
+  transform: rotate(-15deg) scale(1);
+  transition: all ease 0.2s;
+  cursor: pointer;
+  outline: none;
+}
+
+.flask:hover, .flask:focus {
+  transform: rotate(-15deg) scale(1.1);
+  box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0.05), 
+              0px 0px 0px 300px rgba(255, 255, 255, 0.05), 
+              0px 0px 0px 900px rgba(255, 255, 255, 0.05), 
+              0px 0px 0px 3000px rgba(255, 255, 255, 0.05);
+}
+
+.flask:active {
+  box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0.3), 
+              0px 0px 0px 300px rgba(255, 255, 255, 0.3), 
+              0px 0px 0px 900px rgba(255, 255, 255, 0.3), 
+              0px 0px 0px 3000px rgba(255, 255, 255, 0.3);
+}
+
+.flask:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 20px; /* Increased width */
+  height: 80px; /* Increased height */
+  background: #ffbecc;
+  border: 10px solid #ffbecc;
+  left: 60px; /* Adjusted position */
+  top: -80px; /* Adjusted position */
+}
+
+.flask:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 90px; /* Increased width */
+  height: 20px; /* Increased height */
+  background: #ffbecc;
+  left: 35px; /* Adjusted position */
+  top: -80px; /* Adjusted position */
+  border-radius: 5px;
+}
+
+.flask .containing:after {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0px; /* Adjusted position */
+  left: 0px;
+  font-size: 24px; /* Increased font size */
+  font-weight: bold;
+  font-family: 'Varela Round';
+  display: none;
+}
+
+.flask:hover .containing:after, .flask:focus .containing:after {
+  display: block;
+}
+
+.bubbles {
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  animation: bubble 1s linear infinite;
+}
+
+.water-logo {
+  max-width: 60%;
+  /* position: relative; */
+}
+
+@keyframes bubble {
+0% {
+    transform: translateY(-100%);
+    box-shadow: 10px 35px 0px -10px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px -5px 0px -10px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px -5px 0px -10px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                78px 35px 0px -10px rgba(255,255,255,0.5);
+}
+1% {
+  transform: translateY(-100%);
+    box-shadow: 10px 35px 0px -10px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px 55px 0px -10px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px -5px 0px -10px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                78px 35px 0px -10px rgba(255,255,255,0.5);
+}
+25% {
+  transform: translateY(-100%);
+    box-shadow: 10px 15px 0px 0px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px 25px 0px 0px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px -5px 0px -10px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                78px 35px 0px -10px rgba(255,255,255,0.5);
+}
+50% {
+  transform: translateY(-100%);
+    box-shadow: 10px -5px 0px -10px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px 5px 0px -10px rgba(255,255,255,0.5),
+                58px 25px 0px 0px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px -5px 0px -10px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                78px 35px 0px -10px rgba(255,255,255,0.5);
+}
+75% {
+  transform: translateY(-100%);
+    box-shadow: 10px 35px 0px -10px rgba(255,255,255,0.5),
+                25px 25px 0px 0px rgba(255,255,255,0.5),
+                43px 45px 0px -10px rgba(255,255,255,0.5),
+                58px 0px 0px -10px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px -5px 0px -10px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                78px 10px 0px 0px rgba(255,255,255,0.5);
+}
+100% {
+  transform: translateY(-100%);
+    box-shadow: 10px 35px 0px -10px rgba(255,255,255,0.5),
+                25px -5px 0px -10px rgba(255,255,255,0.5),
+                43px 25px 0px 0px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                25px 45px 0px -10px rgba(255,255,255,0.5),
+                43px -5px 0px -10px rgba(255,255,255,0.5),
+                58px 55px 0px -10px rgba(255,255,255,0.5),
+                78px -5px 0px -10px rgba(255,255,255,0.5);
+}
+}

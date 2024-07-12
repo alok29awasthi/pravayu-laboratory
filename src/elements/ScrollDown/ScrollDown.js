@@ -1,5 +1,5 @@
 import React from 'react';
-import './scrollDown.css';
+import './ScrollDown.css';
 
 function ScrollDown() {
   return (

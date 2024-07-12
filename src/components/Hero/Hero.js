@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import LaboratoryImage from "../../assets/images/logo.png"; // Replace with the appropriate image
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
 import { IoCall } from "react-icons/io5";
 import { MdGppGood } from "react-icons/md";
 import ISO from '../../assets/images/iso_logo.png'
@@ -11,7 +10,6 @@ import "./Hero.css";
 import BlinkingButton from "../../elements/BlinkingButton/BlinkingButton";
 
 function Hero() {
-  const navigate = useNavigate();
   const [goUp, setGoUp] = useState(false);
 
   const scrollToTop = () => {
@@ -20,7 +18,7 @@ function Hero() {
 
   useEffect(() => {
     const onPageScroll = () => {
-      if (window.scrollY > 600) {
+      if (window.scrollY > 200) {
         setGoUp(true);
       } else {
         setGoUp(false);
@@ -53,10 +51,6 @@ function Hero() {
           
           <div className="text-stats">
             <div className="text-stats-container">
-              <p>We<br/>Provide</p>
-            </div>
-
-            <div className="text-stats-container">
               <img src={ISO} alt="iso_logo" className="iso_logo" />
               {/* <p>15+</p> */}
               <p>ISO 9001:2015 Certified</p>
@@ -67,10 +61,6 @@ function Hero() {
               {/* <p>15+</p> */}
               <p>NABL Accredited</p>
             </div>
-
-            <div className="text-stats-container">
-              <p>Environmental<br/>Services</p>
-            </div>
           </div>
         </div>
 
@@ -79,10 +69,7 @@ function Hero() {
         </div>
       </div>
 
-      <div
-        onClick={scrollToTop}
-        className={`scroll-up ${goUp ? "show-scroll" : ""}`}
-      >
+      <div onClick={scrollToTop} className={`scroll-up ${goUp ? "show-scroll" : ""}`}>
         <FontAwesomeIcon icon={faAngleUp} />
       </div>
     </div>

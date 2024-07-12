@@ -49,19 +49,20 @@
 .text-stats {
     margin-top: 40px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     gap: 48px;
 }
-.text-stats div:first-child {
+/* .text-stats div:first-child {
     padding-top: 100px;
     text-align: left;
-}
-.text-stats div:last-child {
+}*/
+/* .text-stats div:last-child {
     padding-top: 100px;
     text-align: right;
-}
+}  */
 .text-stats-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -73,13 +74,6 @@
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     letter-spacing: .7px;
-}
-.text-stats-container p:first-child {
-    margin-bottom: 8px;
-    color: #1A8EFD;
-    font-family: 'Rubik', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
 }
 .nabl_logo {
     width: 150px;
@@ -113,7 +107,7 @@
     bottom: 50px;
     right: 50px;
     font-size: 24px;
-    z-index: 20;
+    z-index: 2000;
     cursor: pointer;
 }  
 .show-scroll {
