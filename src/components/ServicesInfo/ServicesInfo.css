@@ -1,13 +1,9 @@
-.info-cards {
-    align-self: center;
-    padding: 50px;
-}
 
 .info-card-title {
     /* margin: 32px 0 40px 0; */
     color: black;
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
+    font-size: 1.8vw;
     font-weight: bold;
     letter-spacing: .8px;
 }
@@ -15,15 +11,26 @@
     /* margin: 24px; */
     color: rgb(77, 75, 75);
     font-family: 'Rubik', sans-serif;
-    font-size: 18px;
+    font-size: 1.2vw;
     letter-spacing: .8px;
-    line-height: 1.5rem;
+    line-height: 1.8vw;
 }
 .info-card-icon {
     position: absolute;
     top: -24px;
-    left: 44%;
+    /* left: 44%; */
     padding: 10px;
     background-color: #DCE6FF;
     border-radius: 30px;
+}
+
+@media screen and (max-width: 800px) {
+    .info-card-title {
+        font-size: 24px;
+    }
+    .info-card-description {
+        padding: 5px;
+        font-size: 15px;
+        line-height: 20px;
+    }
 }

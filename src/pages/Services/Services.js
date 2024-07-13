@@ -85,8 +85,6 @@ const Services = () => {
 
   return (
     <div className="services-container">
-      <div className='full-page-left'/>
-      <div className='full-page-right'/>
       <h3 className="services-title">
         <span>Our Services</span>
       </h3>
