@@ -6,3 +6,23 @@
   text-align: center;
   padding: 20px;
 }
+
+.home-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+.home-title > span {
+  position: relative;
+}
+.home-title span::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: #9D2553;
+  border-radius: 8px;
+  /* left: 0; */
+  bottom: -12px;
+}

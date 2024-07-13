@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import NavbarCheckbox from '../../elements/Checkbox/NavbarCheckbox';
-import { FaCaretDown } from "react-icons/fa";
 import { FaCirclePlus } from "react-icons/fa6";
 import SwallowIcon from '../../elements/SwallowIcon/SwallowIcon';
 
