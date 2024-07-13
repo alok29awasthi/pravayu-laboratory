@@ -32,7 +32,8 @@
 .about-text-content {
   text-align: justify;
   width: 50%;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .about-title {
   text-align: left;

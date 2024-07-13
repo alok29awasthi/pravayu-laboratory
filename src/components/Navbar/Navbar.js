@@ -4,10 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import NavbarCheckbox from '../../elements/Checkbox/NavbarCheckbox';
 import { FaCaretDown } from "react-icons/fa";
 import { FaCirclePlus } from "react-icons/fa6";
+import SwallowIcon from '../../elements/SwallowIcon/SwallowIcon';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [hasBoxShadow, setHasBoxShadow] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navbarCheckboxRef = useRef(null);
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Navbar = () => {
   };
 
   const handleScroll = () => {
-    setHasBoxShadow(window.scrollY > 0);
+    setHasScrolled(window.scrollY > 80);
   };
 
   useEffect(() => {
@@ -33,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav style={{ boxShadow: hasBoxShadow ? 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px' : 'none' }} className='cv__navbar'>
+    <nav className={`cv__navbar ${hasScrolled ? 'scrolled' : ''}`}>
       <div className='cv__navbar-heading'>
         <Link to='/' className='cv__navbar-heading_links'>
           <h1 className='inline'>Pravayu Laboratory</h1>
@@ -45,7 +46,7 @@ const Navbar = () => {
         <li><Link to='/about' className='nav-link'>About</Link></li>
         <li className='dropdown' onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
           <span className='nav-link' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-          <Link to='/service' className='nav-link'>Services</Link><FaCaretDown /></span>
+          <Link to='/service' className='nav-link'>Services</Link><SwallowIcon/></span>
           {isDropdownOpen && (
             <div className='dropdown-div'>
               <ul className='dropdown-content'>

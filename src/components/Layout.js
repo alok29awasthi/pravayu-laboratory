@@ -12,7 +12,7 @@ const Layout = () => {
     <div className="App">
       {/* {renderHeader} */}
       <NavbarComponent />
-      <div style={{ paddingTop: '5rem' }}>
+      <div style={{ paddingTop: '3.5rem' }}>
         <Outlet />
       </div>
       <Footer className="App-footer" />

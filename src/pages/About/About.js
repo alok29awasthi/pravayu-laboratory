@@ -37,7 +37,7 @@ const About = () => {
     <div className={`about-section about-container ${isNavbarOpen ? 'navbar-open' : 'navbar-closed'}`}>
     <div className="about-description-container">
       <div className="about-image-content" style={sectionImageStyles}>
-        <img src={Logo} alt="Doctor Group" className="logo" width={350} />
+        <img src={Logo} alt="Logo" className="logo" width={350} />
       </div>
 
       <div className="about-text-content">
