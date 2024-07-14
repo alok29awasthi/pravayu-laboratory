@@ -5,7 +5,7 @@ import './Home.css';
 // Import images using relative paths
 import Hero from '../../components/Hero/Hero';
 import BeakerAnimation from '../../components/BeakerAnimation/BeakerAnimation';
-import Slideshow from '../../components/Slideshow/Slideshow';
+import ImageSlider from '../../components/SliderMultiple/ImageSlider';
 
 function Home() {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -21,7 +21,8 @@ function Home() {
       {!hasVisited && !animationComplete && <BeakerAnimation onAnimationEnd={handleAnimationEnd} />}
       <Hero/>
       <h2 className='home-title'><span>Check Us Out</span></h2>
-      <Slideshow/>
+      {/* <Slideshow/> */}
+      <ImageSlider/>
     </div>
   );
 }

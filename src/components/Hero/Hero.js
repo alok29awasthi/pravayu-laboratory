@@ -44,7 +44,6 @@ function Hero() {
             analysis, with a commitment to excellence and customer satisfaction.
           </p>
 
-          
           <a href="tel:7355560329" className="call">
             <BlinkingButton text="7355560329" icon={<IoCall/>}/>
           </a>

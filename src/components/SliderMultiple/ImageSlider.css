@@ -1,0 +1,73 @@
+/* src/ImageSlider.css */
+.slider {
+  position: relative;
+  width: 80%; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+  margin: auto; /* Center the slider */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-image, .current-image {
+  /* position: absolute; */
+  top: 0;
+  width: 33.33%; /* Each image takes up 1/3 of the width */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-image {
+  height: 75%;
+}
+
+.background-image {
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.current-image {
+  opacity: 1;
+  z-index: 1;
+  left: 33.33%; /* Center the current image */
+}
+
+.background-image:first-of-type {
+  left: 0; /* Left image */
+  transform: perspective(800px) rotateY(135deg);
+}
+
+.background-image:last-of-type {
+  left: 66.66%; /* Right image */
+  transform: perspective(800px) rotateY(45deg);
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

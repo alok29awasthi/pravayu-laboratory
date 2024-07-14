@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 1000;
   background-color: color(srgb-linear 0.17 0.25 0.54 / 1);
   box-shadow: rgba(105, 8, 8, 0.15) 0px 5px 15px 0px;
   transition: all 0.3s ease-in-out;
