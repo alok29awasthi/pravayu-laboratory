@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/pravayu-laboratory/static/css/main.9e01516c.css",
-    "main.js": "/pravayu-laboratory/static/js/main.7eea4f0b.js",
+    "main.css": "/pravayu-laboratory/static/css/main.f6ccc133.css",
+    "main.js": "/pravayu-laboratory/static/js/main.394d2a65.js",
+    "static/media/Company_Portfolio.pdf": "/pravayu-laboratory/static/media/Company_Portfolio.30a10b8e2e6f006f5c68.pdf",
     "static/media/vision.jpg": "/pravayu-laboratory/static/media/vision.3d39aec2bbba523606d1.jpg",
     "static/media/objective.jpg": "/pravayu-laboratory/static/media/objective.ed17a8b7326a9c81c36d.jpg",
     "static/media/about.jpg": "/pravayu-laboratory/static/media/about.caa48e3262d30ebb7db3.jpg",
     "static/media/s1.jpg": "/pravayu-laboratory/static/media/s1.387bb9f1fd736d37b7fd.jpg",
     "static/media/nabl_logo.png": "/pravayu-laboratory/static/media/nabl_logo.c3dddfd69210c94f46a5.png",
     "static/media/iso_logo.png": "/pravayu-laboratory/static/media/iso_logo.bc9e7a3af14871ccc999.png",
+    "static/media/s5.jpeg": "/pravayu-laboratory/static/media/s5.80666a3c292e82f6f99e.jpeg",
+    "static/media/s6.jpeg": "/pravayu-laboratory/static/media/s6.0cf5e2ea16305c439e62.jpeg",
     "static/media/s3.jpg": "/pravayu-laboratory/static/media/s3.417cb063130e40f83e16.jpg",
     "static/media/s4.jpg": "/pravayu-laboratory/static/media/s4.3a8bad9627398b2cfcbb.jpg",
-    "static/media/logo.png": "/pravayu-laboratory/static/media/logo.5ee7b6d833c8613430a2.png",
+    "static/media/logo.png": "/pravayu-laboratory/static/media/logo.ed08c4e23e95bd79715c.png",
     "static/media/slide1.jpg": "/pravayu-laboratory/static/media/slide1.21fa55936b59cd1132ac.jpg",
     "static/media/s2.jpg": "/pravayu-laboratory/static/media/s2.64fb12a1f765757d733f.jpg",
     "static/media/slide2.jpg": "/pravayu-laboratory/static/media/slide2.59aabf72036bcca9488b.jpg",
+    "static/media/only_logo.png": "/pravayu-laboratory/static/media/only_logo.aaa8667e321cddf65f99.png",
     "index.html": "/pravayu-laboratory/index.html",
-    "main.9e01516c.css.map": "/pravayu-laboratory/static/css/main.9e01516c.css.map",
-    "main.7eea4f0b.js.map": "/pravayu-laboratory/static/js/main.7eea4f0b.js.map"
+    "main.f6ccc133.css.map": "/pravayu-laboratory/static/css/main.f6ccc133.css.map",
+    "main.394d2a65.js.map": "/pravayu-laboratory/static/js/main.394d2a65.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e01516c.css",
-    "static/js/main.7eea4f0b.js"
+    "static/css/main.f6ccc133.css",
+    "static/js/main.394d2a65.js"
   ]
 }
