@@ -1,0 +1,133 @@
+.download-btn {
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    background-color: color(srgb-linear 0.06 0.12 0.39);
+    border: none;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .button-content {
+    transform: translateY(-50px);
+    transition: all 250ms ease-in-out;
+  }
+  
+  .svg-container,
+  .text-container {
+    align-self: center;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-container .text {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    opacity: 1;
+    line-height: 0px;
+    transition: opacity ease-in-out 250ms;
+  }
+
+  .text-container .text p:first-child {
+    font-size: 10px;
+  }
+  
+  .download-icon {
+    height: 25px;
+    width: 25px;
+    fill: #fff;
+    opacity: 0;
+    transition: opacity ease-in-out 250ms;
+  }
+  
+  /* hover state for the button */
+  .download-btn:hover .button-content {
+    transform: translateY(-5px);
+  }
+  
+  .download-btn:hover .text {
+    opacity: 0;
+  }
+  
+  .download-btn:hover .download-icon {
+    opacity: 1;
+  }
+  
+  .download-btn:focus .download-icon {
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+  }
+  
+  @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+  

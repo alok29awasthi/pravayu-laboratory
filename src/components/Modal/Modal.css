@@ -20,11 +20,13 @@
 }
 
 .modal-content {
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   padding: 50px;
   width: 80%;
-  background: white;
+  max-height: 80%;
+  background: linear-gradient(to right, #d18ab0, #FBFCFF);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transform: scale(0.9);
@@ -51,6 +53,33 @@
 
 .modal-body {
   margin-top: 10px;
+}
+
+.modal-body h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+.modal-body h3 > span {
+  position: relative;
+}
+.modal-body h3 span::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #9D2553;
+  border-radius: 8px;
+  bottom: -12px;
+}
+
+.modal-body p {
+  color: rgb(77, 75, 75);
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  letter-spacing: .8px;
+  line-height: 30px;
 }
 
 @media screen and (max-width: 768px) {

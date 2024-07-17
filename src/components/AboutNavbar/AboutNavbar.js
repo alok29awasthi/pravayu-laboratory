@@ -29,7 +29,7 @@ const AboutNavbar = ({ onToggle }, ref) => {
 
   const toggleIcons = () => {
     setIsShowingIcons(!isShowingIcons);
-    onToggle(!isShowingIcons); // Notify parent component about the toggle action
+    onToggle(!isShowingIcons);
   };
 
   const handleMouseEnter = (icon) => {

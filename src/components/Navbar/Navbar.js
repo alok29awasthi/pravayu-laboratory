@@ -4,6 +4,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import NavbarCheckbox from '../../elements/Checkbox/NavbarCheckbox';
 import { FaCirclePlus } from "react-icons/fa6";
 import SwallowIcon from '../../elements/SwallowIcon/SwallowIcon';
+import Logo from '../../assets/images/only_logo.png'
+import DownloadButton from '../../elements/DownloadButton/DownloadButton';
+import Portfolio from '../../assets/pdfs/Company_Portfolio.pdf'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,14 +39,18 @@ const Navbar = () => {
     <nav className={`cv__navbar ${hasScrolled ? 'scrolled' : ''}`}>
       <div className='cv__navbar-heading'>
         <Link to='/' className='cv__navbar-heading_links'>
-          <h1 className='inline'>Pravayu Laboratory</h1>
+          <img src={Logo} alt="logo" />
+          <div>
+            <h1 className='inline'>PRAVAYU<br/></h1>
+            <h2 className='inline'>Testing Laboratory</h2>
+          </div>
         </Link>
       </div>
 
       <ul className='cv__navbar-links'>
-        <li><Link to='/' className='nav-link'>Home</Link></li>
-        <li><Link to='/about' className='nav-link'>About</Link></li>
-        <li className='dropdown' onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
+        <li className='cv__navbar-links-li'><Link to='/' className='nav-link'>Home</Link></li>
+        <li className='cv__navbar-links-li'><Link to='/about' className='nav-link'>About</Link></li>
+        <li className='cv__navbar-links-li dropdown' onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
           <span className='nav-link' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
           <Link to='/service' className='nav-link'>Services</Link><SwallowIcon/></span>
           {isDropdownOpen && (
@@ -59,8 +66,9 @@ const Navbar = () => {
             </div>
           )}
         </li>
-        <li><Link to='/contact' className='nav-link'>Contact</Link></li>
-        <li><Link to='/e-brochure' className='nav-link'>EBrochure</Link></li>
+        <li className='cv__navbar-links-li'><Link to='/contact' className='nav-link'>Contact</Link></li>
+        <li className='cv__navbar-links-li'><Link to='/clients' className='nav-link'>Clients</Link></li>
+        <a href={Portfolio} download='E-Brochure.pdf'><li className='download-button'><DownloadButton/></li></a>
       </ul>
 
       <div className='cv__navbar-smallscreen'>
@@ -70,11 +78,12 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className={isMenuOpen ? 'cv__navbar-smallscreen_overlay active' : 'cv__navbar-smallscreen_overlay'}>
             <ul className='cv__navbar-smallscreen_links'>
-              <li><Link to='/' className='nav-link'>Home</Link></li>
-              <li><Link to='/about' className='nav-link'>About</Link></li>
-              <li className='nav-link' onClick={() => handleServiceClick(1)}>Service</li>
-              <li><Link to='/contact' className='nav-link'>Contact</Link></li>
-              <li><Link to='/e-brochure' className='nav-link'>EBrochure</Link></li>
+              <li><Link to='/' className='nav-link' onClick={() => toggleMenu()}>Home</Link></li>
+              <li><Link to='/about' className='nav-link' onClick={() => toggleMenu()}>About</Link></li>
+              <li><Link to='/service' className='nav-link' onClick={() => toggleMenu()}>Services</Link></li>
+              <li><Link to='/contact' className='nav-link' onClick={() => toggleMenu()}>Contact</Link></li>
+              <li><Link to='/e-brochure' className='nav-link' onClick={() => toggleMenu()}>Clients</Link></li>
+              <a href={Portfolio} download='E-Brochure.pdf'><li><DownloadButton/></li></a>
             </ul>
           </div>
         )}

@@ -33,14 +33,34 @@
 }
 
 .cv__navbar-heading_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   text-decoration: none; /* Remove underline from Link */
+  text-align: center;
+}
+
+.cv__navbar-heading_links img {
+  height: 3rem;
+  margin-right: 10px;
 }
 
 .cv__navbar-heading_links h1 {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 25px;
-  color: white; /* Set the color of h1 text */
+  font-size: 23px;
+  letter-spacing: 4px;
+  text-align: center;
+  line-height: 18px;
+  color: white;
+}
+
+.cv__navbar-heading_links h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 12px;
+  text-align: center;
+  color: white;
 }
 
 .inline {
@@ -67,7 +87,7 @@
   /* transition: height 0.1s ease-in, background-color 0.3s ease-in; */
 }
 
-.cv__navbar-links li:hover {
+.cv__navbar-links-li:hover {
   display: flex;
   align-items: center;
   /* align-self: center; */
@@ -76,6 +96,19 @@
   /* width: 100%; */
   background-color: color(srgb-linear 0.06 0.12 0.39);
 }
+
+.download-button:hover {
+  background-color: transparent;
+}
+/* .download-button {
+  height: 45px;
+  width: 95px;
+  cursor: pointer;
+  background: #8080ff;
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+} */
 
 .cv__navbar-links li a {
   color: white; /* Set link color */
@@ -195,7 +228,7 @@
   color: lightgrey; /* Change color on hover */
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 930px) {
   .cv__navbar-links {
     display: none;
   }
@@ -206,7 +239,6 @@
   }
 
   .cv__navbar-heading {
-    text-align: left;
     padding: 0;
     margin-left: 1rem;
     margin-right: 10px;

@@ -1,0 +1,45 @@
+.clients-container {
+    background: linear-gradient(to left, #ECF2FF, #ceccd6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .clients-grid {
+    /* margin: 1rem 4rem; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vw;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .client-card {
+        width: 30vw;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .client-card {
+        width: 45vw;
+    }
+  }
+  
+  /* @media screen and (max-width: 640px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+  } */

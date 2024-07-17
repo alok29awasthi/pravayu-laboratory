@@ -9,7 +9,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Services from './pages/Services/Services';
 import Contact from './pages/Contact/Contact';
-import EBrochure from './pages/EBrochure';
+import Clients from './pages/Clients/Clients';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact" component={Contact} />
-          <Route path="/e-brochure" component={EBrochure} />
+          <Route path="/clients" component={Clients} />
         </Routes>
         
         <Footer />

@@ -108,7 +108,7 @@ const Services = () => {
 
       {modalOpen && (
         <Modal isOpen={modalOpen} onClose={closeModal}>
-          <h3>{selectedService.title}</h3>
+          <h3><span>{selectedService.title}</span></h3>
           <p>{selectedService.description}</p>
         </Modal>
       )}

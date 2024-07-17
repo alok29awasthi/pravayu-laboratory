@@ -5,8 +5,10 @@ import s1 from '../../assets/images/s1.jpg'
 import s2 from '../../assets/images/s2.jpg'
 import s3 from '../../assets/images/s3.jpg'
 import s4 from '../../assets/images/s4.jpg'
+import s5 from '../../assets/images/s5.jpeg'
+import s6 from '../../assets/images/s6.jpeg'
 
-const images = [s1, s2, s3, s4];
+const images = [s1, s2, s3, s4, s5, s6];
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,11 +30,10 @@ const ImageSlider = () => {
 
   return (
     <div className="slider">
-        {/* <div className='slider-images'> */}
-            <div className="background-image" style={{ backgroundImage: `url(${images[(currentIndex - 1 + images.length) % images.length]})` }} />
-            <div className="current-image" style={{ backgroundImage: `url(${images[currentIndex]})` }} />
-            <div className="background-image" style={{ backgroundImage: `url(${images[(currentIndex + 1) % images.length]})` }} />
-        {/* </div> */}
+        <div className="background-image" style={{ backgroundImage: `url(${images[(currentIndex - 1 + images.length) % images.length]})` }} />
+        <div className="current-image" style={{ backgroundImage: `url(${images[currentIndex]})` }} />
+        <div className="background-image" style={{ backgroundImage: `url(${images[(currentIndex + 1) % images.length]})` }} />
+        
         <button className="prev" onClick={goToPrevious}>❮</button>
         <button className="next" onClick={goToNext}>❯</button>
     </div>

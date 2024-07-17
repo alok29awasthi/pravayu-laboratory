@@ -20,6 +20,7 @@ const About = () => {
     // Update navbarWidth after the component mounts
     if (navbarRef.current) {
       setNavbarWidth(navbarRef.current.offsetWidth);
+      document.documentElement.style.setProperty('--navbar-width', `${navbarRef.current.offsetWidth}px`);
     }
   }, [isNavbarOpen]);
 
@@ -36,7 +37,7 @@ const About = () => {
   return (
     <div className={`about-section about-container ${isNavbarOpen ? 'navbar-open' : 'navbar-closed'}`}>
     <div className="about-description-container">
-      <div className="about-image-content" style={sectionImageStyles}>
+      <div className="about-image-content">
         <img src={Logo} alt="Logo" className="logo" width={350} />
       </div>
 
@@ -51,7 +52,7 @@ const About = () => {
     </div>
 
       <div className="about-description-company about-description-container" id="about-company">
-        <div className="about-the-company about-text-content" style={sectionStyles}>
+        <div className="about-the-company about-text-content">
           <h3 className="about-title">
             <span>About The Company</span>
           </h3>
@@ -81,7 +82,7 @@ const About = () => {
       </div>
 
       <div className="about-description-vision about-description-container" id="vision">
-        <div className="about-image-content" style={sectionImageStyles}>
+        <div className="about-image-content">
           <img src={VisionImg} alt="Doctor Group" className="about-image1" />
         </div>
 
@@ -111,7 +112,7 @@ const About = () => {
       </div>
 
       <div className="about-description-objective about-description-container" id="objective">
-        <div className="about-objective about-text-content" style={sectionStyles}>
+        <div className="about-objective about-text-content">
           <h3 className="about-title">
             <span>Objective</span>
           </h3>
