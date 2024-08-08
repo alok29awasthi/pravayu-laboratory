@@ -9,7 +9,6 @@ import SolutionStep from '../../components/SolutionStep';
 
 const About = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [navbarWidth, setNavbarWidth] = useState(0);
   const navbarRef = useRef(null);
 
   const toggleNavbar = () => {
@@ -19,20 +18,9 @@ const About = () => {
   useEffect(() => {
     // Update navbarWidth after the component mounts
     if (navbarRef.current) {
-      setNavbarWidth(navbarRef.current.offsetWidth);
       document.documentElement.style.setProperty('--navbar-width', `${navbarRef.current.offsetWidth}px`);
     }
   }, [isNavbarOpen]);
-
-  const sectionStyles = {
-    marginLeft: navbarWidth + 30,
-    transition: 'margin-left 0.5s ease', // Add transition for smooth animation
-  };
-
-  const sectionImageStyles = {
-    marginLeft: navbarWidth - 40,
-    transition: 'margin-left 0.5s ease', // Add transition for smooth animation
-  };
 
   return (
     <div className={`about-section about-container ${isNavbarOpen ? 'navbar-open' : 'navbar-closed'}`}>

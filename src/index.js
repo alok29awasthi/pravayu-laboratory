@@ -12,8 +12,8 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Services from './pages/Services/Services';
 import Contact from './pages/Contact/Contact';
-import Clients from './pages/Clients/Clients';
-import Layout from './components/Layout'; // Import the Layout component
+import Layout from './components/Layout';
+import Gallery from './pages/Gallery/Gallery';
 
 const router = createHashRouter([
   {
@@ -36,8 +36,8 @@ const router = createHashRouter([
         element: <Contact />,
       },
       {
-        path: "/clients",
-        element: <Clients />,
+        path: "/gallery",
+        element: <Gallery />,
       },
     ],
   },

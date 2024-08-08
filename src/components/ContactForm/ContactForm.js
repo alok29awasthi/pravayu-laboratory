@@ -2,15 +2,25 @@ import React, { useState } from 'react';
 import { Form, Row, Col } from 'react-bootstrap';
 import './ContactForm.css'; // Import custom CSS for styling
 import SendButton from '../../elements/SendButton/SendButton';
+import { servicesData } from '../../assets/constants/ServicesDropdownData'
 
-function ContactForm() {
+function ContactForm({services = false}) {
   const [formData, setFormData] = useState({
+    service: '',
     firstName: '',
     lastName: '',
     email: '',
     phoneNumber: '',
     message: ''
   });
+
+  const sortedItems = servicesData.flatMap(category => category.items).sort((a, b) => a.name.localeCompare(b.name));
+  // Extract service names from servicesData
+  const serviceOptions = sortedItems.map(item => (
+    <option key={item.name} value={item.name}>
+      {item.name}
+    </option>
+  ));
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,6 +54,26 @@ function ContactForm() {
   return (
     <div className="contact-form-container">
       <Form onSubmit={handleSubmit} className="contact-form">
+        {services && (
+        <Row>
+          <Col md={12}>
+            <Form.Group controlId="services">
+              <Form.Label>Service *</Form.Label>
+              <Form.Select
+                name="service"
+                placeholder='Select Service'
+                value={formData.service}
+                onChange={handleChange}
+                className="input-field"
+                required
+              >
+                <option value="">Other</option>
+                {serviceOptions}
+              </Form.Select>
+            </Form.Group>
+          </Col>
+        </Row>
+        )}
         <Row>
           <Col md={6}>
             <Form.Group controlId="formFirstName">

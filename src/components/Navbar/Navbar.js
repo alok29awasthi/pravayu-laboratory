@@ -1,19 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NavbarCheckbox from '../../elements/Checkbox/NavbarCheckbox';
-import { FaCirclePlus } from "react-icons/fa6";
 import SwallowIcon from '../../elements/SwallowIcon/SwallowIcon';
 import Logo from '../../assets/images/only_logo.png'
 import DownloadButton from '../../elements/DownloadButton/DownloadButton';
 import Portfolio from '../../assets/pdfs/Company_Portfolio.pdf'
+import ServicesDropdown from '../ServicesDropdown/ServicesDropdown';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navbarCheckboxRef = useRef(null);
-  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -29,11 +28,6 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const handleServiceClick = (serviceId) => {
-    navigate('/service', { state: { serviceId } });
-    setIsDropdownOpen(false);
-  };
 
   return (
     <nav className={`cv__navbar ${hasScrolled ? 'scrolled' : ''}`}>
@@ -53,21 +47,23 @@ const Navbar = () => {
         <li className='cv__navbar-links-li dropdown' onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
           <span className='nav-link' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
           <Link to='/service' className='nav-link'>Services</Link><SwallowIcon/></span>
-          {isDropdownOpen && (
-            <div className='dropdown-div'>
-              <ul className='dropdown-content'>
-                <li onClick={() => handleServiceClick(1)}><FaCirclePlus className='plus'/>Environmental Monitoring</li>
-                <li onClick={() => handleServiceClick(2)}><FaCirclePlus className='plus'/>Project Reports</li>
-                <li onClick={() => handleServiceClick(3)}><FaCirclePlus className='plus'/>Environmental Clearance</li>
-                <li onClick={() => handleServiceClick(4)}><FaCirclePlus className='plus'/>Groundwater NOCs</li>
-                <li onClick={() => handleServiceClick(5)}><FaCirclePlus className='plus'/>Environmental NOCs</li>
-                <li onClick={() => handleServiceClick(6)}><FaCirclePlus className='plus'/>EPR Registration</li>
-              </ul>
-            </div>
-          )}
+          {isDropdownOpen && <ServicesDropdown />
+          // (
+          //   <div className='dropdown-div'>
+          //     <ul className='dropdown-content'>
+          //       <li onClick={() => handleServiceClick(1)}><FaCirclePlus className='plus'/>Environmental Monitoring</li>
+          //       <li onClick={() => handleServiceClick(2)}><FaCirclePlus className='plus'/>Project Reports</li>
+          //       <li onClick={() => handleServiceClick(3)}><FaCirclePlus className='plus'/>Environmental Clearance</li>
+          //       <li onClick={() => handleServiceClick(4)}><FaCirclePlus className='plus'/>Groundwater NOCs</li>
+          //       <li onClick={() => handleServiceClick(5)}><FaCirclePlus className='plus'/>Environmental NOCs</li>
+          //       <li onClick={() => handleServiceClick(6)}><FaCirclePlus className='plus'/>EPR Registration</li>
+          //     </ul>
+          //   </div>
+          // )
+          }
         </li>
         <li className='cv__navbar-links-li'><Link to='/contact' className='nav-link'>Contact</Link></li>
-        <li className='cv__navbar-links-li'><Link to='/clients' className='nav-link'>Clients</Link></li>
+        <li className='cv__navbar-links-li'><Link to='/gallery' className='nav-link'>Gallery</Link></li>
         <a href={Portfolio} download='E-Brochure.pdf'><li className='download-button'><DownloadButton/></li></a>
       </ul>
 

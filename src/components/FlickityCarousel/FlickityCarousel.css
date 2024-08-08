@@ -1,0 +1,44 @@
+/* Carousel.css */
+
+/* .main {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: "Arial Black";
+  } */
+  
+  .flickity-container {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .carousel-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    background: #ffffff;
+    counter-increment: gallery-cell;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+  
+  /* .carousel-cell:nth-child(odd) {
+    background: #2C3E50;
+  } */
+  
+  /* cell number */
+  /* .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  } */
+  
+  .flickity-prev-next-button {
+    display: none;
+  }

@@ -1,0 +1,81 @@
+.gallery-container {
+  background: linear-gradient(to left, #ECF2FF, #ceccd6);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+.title > span {
+  position: relative;
+}
+.title span::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: #9D2553;
+  border-radius: 8px;
+  left: 0;
+  bottom: -12px;
+}
+
+.gallery-entire {
+  width: 90%;
+}
+
+.director-title {
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.journey-title {
+  font-size: 26px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.directors {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 1rem;
+  flex-wrap: wrap; 
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  width: 250px;
+  height: 254px;
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+}
+
+.card img {
+  border-radius: 30px;
+  width: 100%;
+  object-fit: cover;
+}

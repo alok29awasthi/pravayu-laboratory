@@ -1,0 +1,109 @@
+.footer-contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #4d4f51;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .footer-contact-heading {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25x;
+    font-weight: bold;
+  }
+.footer-contact-heading > span {
+  position: relative;
+}
+.footer-contact-heading span::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: #b77b92;
+  border-radius: 8px;
+  bottom: -12px;
+}
+
+  .contact-details {
+    flex: 1;
+    /* min-width: 300px; */
+    margin: 0 4rem;
+    display: grid;
+    gap: 5%;
+    grid-template-rows: 1fr 1fr; /* Two rows of equal height */
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contact-details a {
+    text-decoration: none;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: left;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .contact-details a:hover {
+    color: rgb(232, 230, 127);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1101px) {
+    .footer-contact-details {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+}
+  
+  /* Responsive Styles */
+  @media (max-width: 850px) {
+  
+    .map-container {
+      margin-bottom: 20px;
+    }
+  
+    .contact-details {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-details p {
+      margin: 5px 0;
+    }
+  }
+
+
+  @media (max-width: 520px) {
+
+    .footer-contact-details {
+        padding: 0;
+        margin: 0;
+        gap: 0;
+    }
+
+  .contact-details {
+    flex: 1;
+    /* min-width: 300px; */
+    margin: 2rem;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 1fr; /* Two rows of equal height */
+    grid-template-columns: 1fr; /* Two columns of equal width */
+  }
+}
+  

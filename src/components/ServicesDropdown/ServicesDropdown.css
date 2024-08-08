@@ -1,0 +1,61 @@
+.services-dropdown-join {
+  position: absolute;
+  background-color: color(srgb-linear 0.06 0.12 0.39);;
+  margin-top: 1.2rem;
+  border: 0;
+  left: 0;
+  height: 0.5rem;
+  width: 100%;
+}
+
+.services-dropdown-content {
+  position: fixed;
+  background-color: color(srgb-linear 0.06 0.12 0.39);
+  margin-top: 1.7rem;
+  left: 20px;
+  width: 97%;
+  height: 600px;
+}
+
+.services-dropdown li {
+  list-style: none;
+  text-align: left;
+}
+
+.list-parent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 550px;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.list-parent-content h3 {
+  font-size: medium;
+}
+
+.list-child {
+  padding: 0;
+  margin: 0;
+}
+
+.list-child-content {
+  font-size: small;
+  padding: 0;
+  margin: 6px 0;
+  text-decoration: none;
+  max-width: 400px;
+}
+
+.list-child-content a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.list-child-content a:hover {
+  color: black;
+}

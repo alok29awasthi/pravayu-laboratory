@@ -1,0 +1,28 @@
+.map-container {
+    position: relative;
+  }
+  
+  .map-container iframe {
+    width: 450px;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+  }
+  
+  .map-link {
+    position: absolute;
+    top: 0;
+    width: 450px;
+    height: 300px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+
+
+
+@media (max-width: 1101px) {
+  .map-container iframe {
+    width: 85vw;
+  }
+}

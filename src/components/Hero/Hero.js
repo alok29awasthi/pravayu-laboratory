@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import LaboratoryImage from "../../assets/images/logo.png"; // Replace with the appropriate image
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { IoCall } from "react-icons/io5";
 import { MdGppGood } from "react-icons/md";
 import ISO from '../../assets/images/iso_logo.png'
@@ -10,27 +8,6 @@ import "./Hero.css";
 import BlinkingButton from "../../elements/BlinkingButton/BlinkingButton";
 
 function Hero() {
-  const [goUp, setGoUp] = useState(false);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const onPageScroll = () => {
-      if (window.scrollY > 200) {
-        setGoUp(true);
-      } else {
-        setGoUp(false);
-      }
-    };
-    window.addEventListener("scroll", onPageScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onPageScroll);
-    };
-  }, []);
-
   return (
     <div className="section-container">
       <div className="hero-section">
@@ -66,10 +43,6 @@ function Hero() {
         <div className="hero-image-section">
           <img className="hero-image1" src={LaboratoryImage} alt="Laboratory" />
         </div>
-      </div>
-
-      <div onClick={scrollToTop} className={`scroll-up ${goUp ? "show-scroll" : ""}`}>
-        <FontAwesomeIcon icon={faAngleUp} />
       </div>
     </div>
   );

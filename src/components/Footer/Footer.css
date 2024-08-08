@@ -1,4 +1,54 @@
 .App-footer {
     position: relative;
     z-index: 200;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-up {
+    width: 45px;
+    height: 45px;
+    display: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: #1A8EFD;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 24px;
+    z-index: 200000;
+    cursor: pointer;
+}  
+.show-scroll {
+  display: flex;
+}
+
+.footer-client {
+    margin-bottom: 2rem;
+}
+
+.footer-client-heading {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+.footer-client-heading > span {
+  position: relative;
+}
+.footer-client-heading span::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: #b77b92;
+  border-radius: 8px;
+  bottom: -12px;
 }
