@@ -8,7 +8,7 @@ function Contact() {
       <h3 className="contact-title">
         <span>Contact Us</span>
       </h3>
-      <ContactForm />
+      <ContactForm message='Tell us your requirements'/>
     </div>
   );
 }

@@ -10,6 +10,7 @@
 .contact-form-container {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
+    min-width: 300px;
     max-width: 600px;
     margin: auto;
     padding: 30px;
@@ -85,5 +86,9 @@
 @media screen and (max-width: 768px) {
     .contact-form-container {
         padding: 20px;
+    }
+
+    .contact-form-container {
+        min-width: 100px;
     }
 }

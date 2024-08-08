@@ -4,7 +4,7 @@ import './ContactForm.css'; // Import custom CSS for styling
 import SendButton from '../../elements/SendButton/SendButton';
 import { servicesData } from '../../assets/constants/ServicesDropdownData'
 
-function ContactForm({services = false}) {
+function ContactForm({services = false, message = 'Message'}) {
   const [formData, setFormData] = useState({
     service: '',
     firstName: '',
@@ -58,7 +58,7 @@ function ContactForm({services = false}) {
         <Row>
           <Col md={12}>
             <Form.Group controlId="services">
-              <Form.Label>Service *</Form.Label>
+              <Form.Label>Service Required *</Form.Label>
               <Form.Select
                 name="service"
                 placeholder='Select Service'
@@ -143,7 +143,7 @@ function ContactForm({services = false}) {
         <Row>
           <Col md={12}>
             <Form.Group controlId="formMessage">
-              <Form.Label>Message *</Form.Label>
+              <Form.Label>{message}</Form.Label>
               <Form.Control
                 as="textarea"
                 name="message"
@@ -151,7 +151,6 @@ function ContactForm({services = false}) {
                 onChange={handleChange}
                 rows={5}
                 className="textarea-field"
-                required
               />
             </Form.Group>
           </Col>

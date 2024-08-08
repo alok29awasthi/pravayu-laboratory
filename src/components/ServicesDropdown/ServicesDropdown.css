@@ -1,3 +1,17 @@
+.services-dropdown {
+  /* Existing styles */
+  transition: opacity 0.3s ease;
+}
+
+.services-dropdown.open {
+  opacity: 1;
+}
+
+.services-dropdown.closed {
+  opacity: 0;
+  pointer-events: none; /* Optional: To prevent clicks on the closed dropdown */
+}
+
 .services-dropdown-join {
   position: absolute;
   background-color: color(srgb-linear 0.06 0.12 0.39);;

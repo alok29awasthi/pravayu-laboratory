@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from './Footer/Footer';
 import NavbarComponent from './Navbar/Navbar';
 import '../App.css'; // Import the CSS file
+import ScrollToTop from './ScrollToTop';
 
 const Layout = () => {
   // Conditionally render Header only on the home page
@@ -10,7 +11,7 @@ const Layout = () => {
 
   return (
     <div className="App">
-      {/* {renderHeader} */}
+      <ScrollToTop />
       <NavbarComponent />
       <div style={{ paddingTop: '3.5rem' }}>
         <Outlet />

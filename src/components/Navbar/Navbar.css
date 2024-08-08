@@ -128,6 +128,7 @@
   transition: 0.9s 0.5s ease, transform 0.5s ease;
   flex-direction: column;
   z-index: 1;
+  overflow: scroll;
 }
 
 .cv__navbar-smallscreen_links {
@@ -136,10 +137,11 @@
   flex-direction: column;
   list-style: none;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .cv__navbar-smallscreen_links li {
+  text-align: left;
   color: white;
   font-size: 18px;
   margin: 1.2rem 1rem;
@@ -157,6 +159,40 @@
 
 .cv__navbar-smallscreen_links li a:hover {
   color: lightgrey; /* Change color on hover */
+}
+
+.services-small-category {
+  margin-left: 10px;
+}
+
+.services-small-category li {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.services-small-category a {
+  padding: 0;
+  margin: 0;
+}
+
+.services-small-category-child {
+  padding: 0;
+}
+
+.services-small-category-parent-content h3 {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.services-small-category-child-content a {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.download-e-brochure {
+  align-self: center;
 }
 
 @media screen and (max-width: 930px) {

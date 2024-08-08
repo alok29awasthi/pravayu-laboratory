@@ -62,4 +62,16 @@
     transform: translate(-50%, 50%);
     opacity: 1;
   }
+
+  @media screen and (max-width: 828px) {
+    .services-card {
+      width: 280px;
+    }
+  }
+
+  @media screen and (max-width: 748px) {
+    .services-card {
+      width: 260px;
+    }
+  }
   
