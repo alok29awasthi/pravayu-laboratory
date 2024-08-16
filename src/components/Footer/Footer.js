@@ -11,7 +11,6 @@ function Footer() {
 
   const flickityOptions = {
     autoPlay: 1000,
-    rightToLeft: true,
   };
 
   const scrollToTop = () => {

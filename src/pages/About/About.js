@@ -6,6 +6,7 @@ import VisionImg from '../../assets/images/vision.jpg';
 import ObjectiveImg from '../../assets/images/objective.jpg';
 import Logo from '../../assets/images/logo.png';
 import SolutionStep from '../../components/SolutionStep';
+import { LuMicroscope } from "react-icons/lu";
 
 const About = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);

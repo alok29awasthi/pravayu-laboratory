@@ -1,15 +1,17 @@
-import c1 from './c1.png';
-import c2 from './c2.png';
-import c3 from './c3.png';
-import c4 from './c4.png';
-import c5 from './c5.png';
-import c6 from './c6.png';
-import c7 from './c7.png';
-import c8 from './c8.png';
-import c9 from './c9.png';
-import c10 from './c10.png';
-import c11 from './c11.png';
-import c12 from './c12.png';
+import c1 from './c1.jpg';
+import c2 from './c2.jpg';
+import c3 from './c3.jpg';
+import c4 from './c4.jpg';
+import c5 from './c5.jpg';
+import c6 from './c6.jpg';
+import c7 from './c7.jpg';
+import c8 from './c8.jpg';
+import c9 from './c9.jpg';
+import c10 from './c10.jpg';
+import c11 from './c11.jpg';
+import c12 from './c12.jpg';
+import c13 from './c13.jpg';
+import c14 from './c14.jpg';
 
 export const clientImages = [
   {
@@ -71,5 +73,15 @@ export const clientImages = [
     src: c12,
     alt: 'Description for image 12',
     title: 'Title for image 12'
+  },
+  {
+    src: c13,
+    alt: 'Description for image 11',
+    title: 'Title for image 13'
+  },
+  {
+    src: c14,
+    alt: 'Description for image 12',
+    title: 'Title for image 14'
   }
 ];

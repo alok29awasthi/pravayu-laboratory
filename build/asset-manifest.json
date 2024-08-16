@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pravayu-laboratory/static/css/main.0be1b804.css",
-    "main.js": "/pravayu-laboratory/static/js/main.82663131.js",
+    "main.css": "/pravayu-laboratory/static/css/main.7322ef60.css",
+    "main.js": "/pravayu-laboratory/static/js/main.7232ab6d.js",
     "static/js/633.b60b4f26.chunk.js": "/pravayu-laboratory/static/js/633.b60b4f26.chunk.js",
     "static/media/Company_Portfolio.pdf": "/pravayu-laboratory/static/media/Company_Portfolio.30a10b8e2e6f006f5c68.pdf",
     "static/media/vision.jpg": "/pravayu-laboratory/static/media/vision.3d39aec2bbba523606d1.jpg",
@@ -31,12 +31,12 @@
     "static/media/c7.png": "/pravayu-laboratory/static/media/c7.107380520251852e8c6d.png",
     "static/media/c8.png": "/pravayu-laboratory/static/media/c8.b2868344ee2ab35305bc.png",
     "index.html": "/pravayu-laboratory/index.html",
-    "main.0be1b804.css.map": "/pravayu-laboratory/static/css/main.0be1b804.css.map",
-    "main.82663131.js.map": "/pravayu-laboratory/static/js/main.82663131.js.map",
+    "main.7322ef60.css.map": "/pravayu-laboratory/static/css/main.7322ef60.css.map",
+    "main.7232ab6d.js.map": "/pravayu-laboratory/static/js/main.7232ab6d.js.map",
     "633.b60b4f26.chunk.js.map": "/pravayu-laboratory/static/js/633.b60b4f26.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0be1b804.css",
-    "static/js/main.82663131.js"
+    "static/css/main.7322ef60.css",
+    "static/js/main.7232ab6d.js"
   ]
 }
