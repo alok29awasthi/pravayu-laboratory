@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Form, Row, Col } from 'react-bootstrap';
-import './ContactForm.css'; // Import custom CSS for styling
+import emailjs from 'emailjs-com';  // Import EmailJS
+import './ContactForm.css';
 import SendButton from '../../elements/SendButton/SendButton';
-import { servicesData } from '../../assets/constants/ServicesDropdownData'
+import { servicesData } from '../../assets/constants/ServicesDropdownData';
 
-function ContactForm({services = false, message = 'Message'}) {
+function ContactForm({ services = false, message = 'No Message' }) {
   const [formData, setFormData] = useState({
     service: '',
     firstName: '',
@@ -15,7 +16,6 @@ function ContactForm({services = false, message = 'Message'}) {
   });
 
   const sortedItems = servicesData.flatMap(category => category.items).sort((a, b) => a.name.localeCompare(b.name));
-  // Extract service names from servicesData
   const serviceOptions = sortedItems.map(item => (
     <option key={item.name} value={item.name}>
       {item.name}
@@ -25,9 +25,8 @@ function ContactForm({services = false, message = 'Message'}) {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Validate input for phone number (only allow numeric characters)
     if (name === 'phoneNumber' && !/^\d*$/.test(value)) {
-      return; // Prevent updating state if input contains non-numeric characters
+      return;
     }
 
     setFormData({
@@ -38,41 +37,66 @@ function ContactForm({services = false, message = 'Message'}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
 
-    // Validation before submission
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phoneNumber || !formData.message) {
       alert('Please fill in all fields.');
       return;
     }
 
-    // Construct mailto link for email submission
-    const mailtoLink = `mailto:your_email@example.com?subject=Contact%20Form%20Submission&body=Name:%20${formData.firstName}%20${formData.lastName}%0AEmail:%20${formData.email}%0APhone:%20${formData.phoneNumber}%0AMessage:%20${formData.message}`;
-    window.location.href = mailtoLink;
+    // Define the template parameters for EmailJS
+    const templateParams = {
+      service: formData.service,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phoneNumber: formData.phoneNumber,
+      message: formData.message,
+    };
+
+    // Send the email using EmailJS
+    emailjs.send('service_h9wljqh', 'template_f3mg4w9', templateParams, 'Y1S6kcZ82wyIJsBb6')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Your message has been sent successfully!');
+
+        setFormData({
+          service: '',
+          firstName: '',
+          lastName: '',
+          email: '',
+          phoneNumber: '',
+          message: ''
+        });
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        alert('Failed to send your message. Please try again later.');
+      });
   };
 
   return (
     <div className="contact-form-container">
       <Form onSubmit={handleSubmit} className="contact-form">
         {services && (
-        <Row>
-          <Col md={12}>
-            <Form.Group controlId="services">
-              <Form.Label>Service Required *</Form.Label>
-              <Form.Select
-                name="service"
-                placeholder='Select Service'
-                value={formData.service}
-                onChange={handleChange}
-                className="input-field"
-                required
-              >
-                <option value="">Other</option>
-                {serviceOptions}
-              </Form.Select>
-            </Form.Group>
-          </Col>
-        </Row>
+          <Row>
+            <Col md={12}>
+              <Form.Group controlId="services">
+                <Form.Label>Service Required *</Form.Label>
+                <Form.Select
+                  name="service"
+                  placeholder='Select Service'
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="input-field"
+                  defaultValue="Not Selected"
+                  required
+                >
+                  <option value="">Other</option>
+                  {serviceOptions}
+                </Form.Select>
+              </Form.Group>
+            </Col>
+          </Row>
         )}
         <Row>
           <Col md={6}>
@@ -133,7 +157,7 @@ function ContactForm({services = false, message = 'Message'}) {
                 onChange={handleChange}
                 placeholder="Enter your phone number"
                 className="input-field"
-                pattern="[0-9]*" // Pattern attribute to enforce numeric input
+                pattern="[0-9]*"
                 required
               />
             </Form.Group>
@@ -157,7 +181,7 @@ function ContactForm({services = false, message = 'Message'}) {
         </Row>
 
         <div className='send'>
-          <SendButton/>
+          <SendButton />
         </div>
       </Form>
     </div>

@@ -70,7 +70,7 @@ const Services = () => {
             </div>
             <div className='enquiry-form'>
               <h3 className='services-title enquiry-form-title'><span>Enquiry</span></h3>
-              <ContactForm services='true' />
+              <ContactForm services='true' message='Tell us your requirements' />
             </div>
           </div>
           <button className='more-less-button' onClick={handleLessClick}>Show Less</button>
