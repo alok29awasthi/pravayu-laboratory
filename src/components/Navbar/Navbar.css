@@ -100,7 +100,7 @@
   background-color: transparent;
 }
 
-.cv__navbar-links li a {
+.cv__navbar-links a {
   color: white; /* Set link color */
   text-decoration: none; /* Remove underline from links */
   transition: color 0.3s ease-in-out;
@@ -203,6 +203,10 @@
   .cv__navbar-smallscreen {
     margin-right: 4rem;
     display: flex;
+  }
+
+  .cv__navbar-smallscreen_links a {
+    text-decoration: none;
   }
 
   .cv__navbar-heading {

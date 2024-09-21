@@ -49,8 +49,8 @@ const Navbar = () => {
       </div>
 
       <ul className='cv__navbar-links'>
-        <li className='cv__navbar-links-li'><Link to='/' className='nav-link'>Home</Link></li>
-        <li className='cv__navbar-links-li'><Link to='/about' className='nav-link'>About</Link></li>
+        <Link to='/' className='nav-link'><li className='cv__navbar-links-li'>Home</li></Link>
+        <Link to='/about' className='nav-link'><li className='cv__navbar-links-li'>About</li></Link>
         <li 
           className='cv__navbar-links-li dropdown' 
           onMouseEnter={() => setIsDropdownOpen(true)} 
@@ -61,8 +61,8 @@ const Navbar = () => {
           </span>
           {isDropdownOpen && <ServicesDropdown />}
         </li>
-        <li className='cv__navbar-links-li'><Link to='/contact' className='nav-link'>Contact</Link></li>
-        <li className='cv__navbar-links-li'><Link to='/gallery' className='nav-link'>Gallery</Link></li>
+        <Link to='/contact' className='nav-link'><li className='cv__navbar-links-li'>Contact</li></Link>
+        <Link to='/gallery' className='nav-link'><li className='cv__navbar-links-li'>Gallery</li></Link>
         <a href={Portfolio} download='E-Brochure.pdf'><li className='download-button'><DownloadButton/></li></a>
       </ul>
 
@@ -73,11 +73,11 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className={isMenuOpen ? 'cv__navbar-smallscreen_overlay active' : 'cv__navbar-smallscreen_overlay'}>
             <ul className='cv__navbar-smallscreen_links'>
-              <li><Link to='/' className='nav-link' onClick={toggleMenu}>Home</Link></li>
-              <li><Link to='/about' className='nav-link' onClick={toggleMenu}>About</Link></li>
+              <Link to='/' className='nav-link' onClick={toggleMenu}><li>Home</li></Link>
+              <Link to='/about' className='nav-link' onClick={toggleMenu}><li>About</li></Link>
               <li>
                 <div className='nav-link' onClick={toggleSmallDropdown}>
-                <Link to='/service' className='nav-link' onClick={toggleMenu}>Services</Link><SwallowIcon/>
+                  <Link to='/service' className='nav-link' onClick={toggleMenu}>Services</Link><SwallowIcon/>
                 </div>
                 {isSmallDropdownOpen && (
                   <div className="services-small-category">
@@ -86,17 +86,16 @@ const Navbar = () => {
                         <h3>{service.category}</h3>
                         <ul className='services-small-category-child'>
                           {service.items.map((item, subIndex) => (
-                            <li className='services-small-category-child-content' key={subIndex}>
-                              <Link 
-                                to={`/service?category=${service.category}`} 
-                                onClick={() => {
-                                  toggleMenu();
-                                  toggleSmallDropdown();
-                                }}
-                              >
-                                - {item.name}
-                              </Link>
-                            </li>
+                            <Link 
+                              key={subIndex}
+                              to={`/service?category=${service.category}`} 
+                              onClick={() => {
+                                toggleMenu();
+                                toggleSmallDropdown();
+                              }}
+                            >
+                              <li className='services-small-category-child-content'>- {item.name}</li>
+                            </Link>
                           ))}
                         </ul>
                       </li>
@@ -104,8 +103,8 @@ const Navbar = () => {
                   </div>
                 )}
               </li>
-              <li><Link to='/contact' className='nav-link' onClick={toggleMenu}>Contact</Link></li>
-              <li><Link to='/gallery' className='nav-link' onClick={toggleMenu}>Gallery</Link></li>
+              <Link to='/contact' className='nav-link' onClick={toggleMenu}><li>Contact</li></Link>
+              <Link to='/gallery' className='nav-link' onClick={toggleMenu}><li>Gallery</li></Link>
               <a href={Portfolio} download='E-Brochure.pdf' className='download-e-brochure'><li><DownloadButton/></li></a>
             </ul>
           </div>

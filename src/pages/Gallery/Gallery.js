@@ -1,7 +1,7 @@
 import React from 'react';
 import './Gallery.css';
 import FlipCard from '../../components/FlipCard/FlipCard';
-import Pravin from '../../assets/images/galleryImages/praveen.jpeg';
+import Pravin from '../../assets/images/galleryImages/pravin.jpg';
 import Pramod from '../../assets/images/galleryImages/pramod.jpg';
 import { galleryImages } from '../../assets/images/galleryImages/galleryImages'; // Import the images array
 
