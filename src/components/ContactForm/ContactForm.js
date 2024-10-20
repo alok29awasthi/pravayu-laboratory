@@ -54,7 +54,7 @@ function ContactForm({ services = false, message = 'No Message' }) {
     };
 
     // Send the email using EmailJS
-    emailjs.send('service_h9wljqh', 'template_f3mg4w9', templateParams, 'Y1S6kcZ82wyIJsBb6')
+    emailjs.send('service_v4ezqfg', 'template_3iyguz2', templateParams, '-mOq8Ph6lEIQZz24A')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Your message has been sent successfully!');

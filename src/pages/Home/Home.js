@@ -8,6 +8,8 @@ import BeakerAnimation from '../../components/BeakerAnimation/BeakerAnimation';
 import FlickityCarousel from '../../components/FlickityCarousel/FlickityCarousel';
 import { galleryImages } from '../../assets/images/galleryImages/galleryImages';
 import ServicesDropdown from '../../components/ServicesDropdown/ServicesDropdown';
+import Loader from '../../components/LoaderAnimation/Loader';
+import DotsLoader from '../../components/DotAnimation/DotsLoader';
 
 function Home() {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -20,7 +22,7 @@ function Home() {
 
   return (
     <div className="Home">
-      {!hasVisited && !animationComplete && <BeakerAnimation onAnimationEnd={handleAnimationEnd} />}
+      {!hasVisited && !animationComplete && <DotsLoader onAnimationEnd={handleAnimationEnd} />}
       <Hero/>
       <div className='home-gallery'>
         <h2 className='home-title'><span>Check Us Out</span></h2>
